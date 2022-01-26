@@ -27,3 +27,20 @@ const mostrarAtributos = () => {
     atr1.innerHTML=instanciaA.getFoo(); 
     atr2.innerHTML=instanciaA.getBar();  
 }
+
+class B {
+    constructor(input) {
+        this.input=input; 
+    }
+
+    mostrarAlerta() {
+        alert(`El usuario ha introducido: ${this.input}`); 
+    }
+}
+
+const leerValoryMostrar = () => {
+    const inputUser = document.getElementById("inputUser"); 
+    const instanciaB = new B(inputUser.value);
+    instanciaB.mostrarAlerta();  
+}
+

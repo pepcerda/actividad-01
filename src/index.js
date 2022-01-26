@@ -1,8 +1,9 @@
 
 class A {
-    constructor(foo, bar) {
+    constructor(foo, bar, lorem) {
         this.foo = foo; 
-        this.bar = bar; 
+        this.bar = bar;
+        this.lorem = lorem;  
     }
 
     getFoo() {
@@ -13,19 +14,25 @@ class A {
         return this.bar; 
     }
 
+    getLorem() {
+        return this.lorem; 
+    }
+
     displayInfo() {
-        console.log(`Esta clase tiene dos atributos que son: ${this.foo} y ${this.bar}`); 
+        console.log(`Esta clase tiene dos atributos que son: ${this.foo}, ${this.bar} y ${this.lorem}`); 
     }
 }
 
-const instanciaA = new A("foo", "bar"); 
+const instanciaA = new A("foo", "bar", "lorem"); 
 instanciaA.displayInfo(); 
 
 const mostrarAtributos = () => {
     let atr1 = document.getElementById("atributo1");
     let atr2 = document.getElementById("atributo2");
+    let atr3 = document.getElementById("atributo3");
     atr1.innerHTML=instanciaA.getFoo(); 
     atr2.innerHTML=instanciaA.getBar();  
+    atr3.innerHTML=instanciaA.getLorem();  
 }
 
 class B {
